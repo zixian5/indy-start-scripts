@@ -2,7 +2,7 @@ There are some scripts helping you build the indy network with docker .
 
 At first, we will build the test network and you wil know how to use the scripts.
 
-(1)access this file 
+(1)enter this file 
 
       RUN: cd start-local
 
@@ -24,7 +24,7 @@ At first, we will build the test network and you wil know how to use the scripts
 (5)enter the container and enter the folder that we will use 
 
      RUN: docker exec -it {container's name} bash
-     RUN: cd /home/indy/Start
+     RUN: cd /home/indy/start
 
 (6)init some nyms with init_nym.py.
       
@@ -96,7 +96,7 @@ At first, we will build the test network and you wil know how to use the scripts
 
 Now if you want build the network in your way ,there are several place needed to change.
 
-   (1)modify the the config int the dockerfile which are echod into /etc/supervisord.conf /I believe changing it is also ok after running the container.But i haven't try it.
+   (1)Using the indy-start-local.dockerfile instead and modify the the config in /etc/supervisord.conf
    
    (2)Every one who joins the network can generate the nym by using his own seed. So after generating the nyms, they need exchanging them and modify the nym.config by using vim. But everyone' s nym.config must be same and the first role must be TRUSTEE.
    
