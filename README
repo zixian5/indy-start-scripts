@@ -1,11 +1,17 @@
 There are some scripts helping you build the indy network with docker .
+
 At first, we will build the test network and you wil know how to use the scripts.
+
 (1)access this file 
-           RUN: cd start-local
+
+      RUN: cd start-local
+
 (2)build a docker image with indy-startlocal.dockerfile
-      RUN: docker build -f indy-startlocal.dockerfile -t indy_start .
+     
+     RUN: docker build -f indy-startlocal.dockerfile -t indy_start .
+
 (3)build  the container and find its name.
-      RUN: docker run -itd -p 9701-9708:9701-9708 indy_start
+    RUN: docker run -itd -p 9701-9708:9701-9708 indy_start
     RUN: docker ps 
      
      Remember the names that shows.
@@ -90,9 +96,12 @@ At first, we will build the test network and you wil know how to use the scripts
 Now if you want build the network in your way ,there are several place needed to change.
 
    (1)modify the the config int the dockerfile which are echod into /etc/supervisord.conf /I believe changing it is also ok after running the container.But i haven't try it.
+   
    (2)Every one who joins the network can generate the nym by using his own seed. So after generating the nyms, they need exchanging them and modify the nym.config by using vim. But everyone' s nym.config must be same and the first role must be TRUSTEE.
+   
    (3)Using init_node_base.py and init_node_keys_tofile.py to generate the config and keys file for the node running in local. However, other node's config you need add them into the node.config by yourself.
    !!!One important thing is that you need to change the parameter islocal from 'True' to 'False'.
+   
    (4)And then ,you can generate genesis file and test your network.
 
 
