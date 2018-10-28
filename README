@@ -1,19 +1,12 @@
 There are some scripts helping you build the indy network with docker .
-
 At first, we will build the test network and you wil know how to use the scripts.
-
 (1)access this file 
-     
-      RUN: cd start-local
-
+           RUN: cd start-local
 (2)build a docker image with indy-startlocal.dockerfile
-
       RUN: docker build -f indy-startlocal.dockerfile -t indy_start .
-
 (3)build  the container and find its name.
-     
-     RUN: docker run -itd -p 9701-9708:9701-9708 indy_start
-     RUN: docker ps 
+      RUN: docker run -itd -p 9701-9708:9701-9708 indy_start
+    RUN: docker ps 
      
      Remember the names that shows.
 
