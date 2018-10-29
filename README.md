@@ -47,7 +47,7 @@ python3 init_nym.py --name Trustee --role TRUSTEE --seed 00000000000000000000000
 python3 init_nym.py --name Steward1 --role STEWARD --seed 000000000000000000000000Steward1 --fromnym V4SGRU86Z58d6TV7PBUe6f
 python3 init_nym.py --name Steward2 --role STEWARD --seed 000000000000000000000000Steward2 --fromnym V4SGRU86Z58d6TV7PBUe6f
 python3 init_nym.py --name Steward3 --role STEWARD --seed 000000000000000000000000Steward3 --fromnym V4SGRU86Z58d6TV7PBUe6f
-python3 init_nym.py --name Steward4 --role STEWARD --seed 000000000000000000000000Steward4 --fromnym V4SGRU86Z58d6TV7PBUe6f
+python3 init_nym.py --name Steward4 --role STEWARD --seed 000000000000000000000000Steward4 --fromnym V4SGRU86Z58d6TV7PBUe6f
 ```
 You can run vim nym.config , and find the configure.
 ##### (7) **init the nodes' keys with init_node_keys_tofile.py.**
@@ -80,7 +80,7 @@ python3 generate_pool_genesis.py
 ```
 This command will run forever. So if you want to control the container, please run ``` docker exec -it {container's name} bash ``` again.
 
-#####(11) **test the network with sdk.**
+##### (11) **test the network with sdk.**
 There are several sdks you can use and you can choose the language .
  Here are some samples:
 
