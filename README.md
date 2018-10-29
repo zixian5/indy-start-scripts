@@ -1,7 +1,7 @@
 # Start-network-scripts
 #### There are some scripts helping you build the indy network with docker .
  ---
-## At first, we will build the test network and you wil know how to use the scripts.
+## At first, we will build the test network and you will know how to use the scripts.
 
 ##### (1) **download and enter this file** 
 ```
