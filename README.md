@@ -82,11 +82,11 @@ This command will run forever. So if you want to control the container, please r
 
 ##### (11) **test the network with sdk.**
 There are several sdks you can use and you can choose the language .
+One import thing is that you need to change the ip in the genesis configure file. In this sample ,we use '127.0.0.1'.
  Here are some samples:
 
        1.a java sample(https://github.com/blokaly/indy-java-cli)
        2.offical sdks and samples (https://github.com/hyperledger/indy-sdk/)
- One import thing is that you need to change the ip in the genesis configure file. In this sample ,we use '127.0.0.1'.
  ----
 ### Now if you want build the network in yourown way ,there are several place needing to be changed.
   (1) Using the indy-start-local.dockerfile instead and modify the  config in /etc/supervisord.conf 
