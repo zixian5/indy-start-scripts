@@ -88,7 +88,7 @@ One import thing is that you need to change the ip in the genesis configure file
        1.a java sample(https://github.com/blokaly/indy-java-cli)
        2.offical sdks and samples (https://github.com/hyperledger/indy-sdk/)
  ----
-### Now if you want build the network in yourown way ,there are several place needing to be changed.
+#### Now if you want build the network in your own way ,there are several place needing to be changed.
   (1) Using the indy-start-local.dockerfile instead and modify the  config in /etc/supervisord.conf 
  
 (2) Every one who joins the network can generate the nym by using his own seed. So after generating the nyms, they need exchanging them and modify the nym.config by using vim. But everyone' s nym.config must be same and the first role must be TRUSTEE.
