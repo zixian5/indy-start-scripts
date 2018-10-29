@@ -1,7 +1,7 @@
 # Start-network-scripts
 #### There are some scripts helping you build the indy network with docker .
  ---
-##At first, we will build the test network and you wil know how to use the scripts.
+## At first, we will build the test network and you wil know how to use the scripts.
 
 ##### (1) **download and enter this file** 
 ```
@@ -50,7 +50,7 @@ python3 init_nym.py --name Steward3 --role STEWARD --seed 0000000000000000000000
 python3 init_nym.py --name Steward4 --role STEWARD --seed 000000000000000000000000Steward4 --fromnym V4SGRU86Z58d6TV7PBUe6f
 ```
 You can run vim nym.config , and find the configure.
-#####(7) **init the nodes' keys with init_node_keys_tofile.py.**
+##### (7) **init the nodes' keys with init_node_keys_tofile.py.**
 This script can generate the key file and its path is */var/lib/indy/sandbox/keys* .
 And it will generate the key's information into the node.config ,it will be used to generate the pool_transactions_genesis.
 If you want more information about this script, please run
@@ -61,7 +61,7 @@ python3 init_node_keys_tofile.py --name Node3 --seed 000000000000000000000000000
 python3 init_node_keys_tofile.py --name Node3 --seed 000000000000000000000000000Node3
 python3 init_node_keys_tofile.py --name Node1 --seed 000000000000000000000000000Node1
 ```
-#####(8) **init the nodes' information with init_node_base.py.**
+##### (8) **init the nodes' information with init_node_base.py.**
 ```
 python3 init_node_base.py --name Node1 --fromnym Th7MpTaRZVRYnPiabds81Y --ip 127.0.0.1 --node_port 9701 --client_port 9702
 python3 init_node_base.py --name Node2 --fromnym EbP4aYNeTHL6q385GuVpRV --ip 127.0.0.1 --node_port 9703 --client_port 9704
@@ -69,12 +69,12 @@ python3 init_node_base.py --name Node3 --fromnym 4cU41vWW82ArfxJxHkzXPG --ip 127
  python3 init_node_base.py --name Node4 --fromnym TWwCRQRZ2ZHMJFn9TzLp7W --ip 127.0.0.1 --node_port 9707 --client_port 9708
 ```
 You can run vim node.config.
-#####(9) **generate pool_transactions_genesis and domain_transactions_genesis** 
+##### (9) **generate pool_transactions_genesis and domain_transactions_genesis** 
 ```
 python3 generate_domain_genesis.py 
 python3 generate_pool_genesis.py 
 ```
-####(10) **start four nodes**.
+##### (10) **start four nodes**.
 ```
 /usr/bin/supervisord
 ```
